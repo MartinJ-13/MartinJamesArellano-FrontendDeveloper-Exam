@@ -5,11 +5,20 @@ body {
   margin: 0;
   font-family: 'Poppins';
 }
-
+.web-page{
+  margin:50px;
+}
 .display-card{
  background-color: #F2F4F5;
- width: 80%;
- border-radius: 25px;
+ width: 1500px;
+ border-radius: 7px;
+ margin-inline: 25px;
+ margin-block: 10px;
+ padding-inline: 30px;
+ padding-block: 20px;
+ display: flex;
+ flex-direction: row;
+ gap : 15px;
 }
 
 .checkbox-div {
@@ -31,11 +40,13 @@ h3 {
   height: 15px;
   border-radius: 15%;
   vertical-align: middle;
-  border: 1px solid #9E9E9E;
+  border: 2px solid #9E9E9E;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
+  background-color: white;
+  margin-right: 10px;
 }
 
 .rounded-checkbox:checked {
@@ -87,7 +98,68 @@ h3 {
   background-color: #f46262;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-subheader{
+  font-size: 20px;
+  font-weight: 700;
+  color: #727986; 
+  margin-inline: 10px;
 }
+
+.card-header{
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.card-details{
+  display: flex;
+  flex-direction: row;
+}
+
+#eye-icon{
+  margin-bottom: 3px;
+}
+.article-body{
+  color: #838995;
+  width: 13%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+#read-full{
+  color: #4285F5;
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 20px;
+  display: inline-block;
+}
+
+#read-full:hover{
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 20px;
+  display: inline-block;
+}
+
+#read-div{
+  display: inline;
+}
+
+#read-div:hover{
+
+  cursor: pointer;
+  display: inline;
+}
+
