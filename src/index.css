@@ -1,10 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins';
+}
+
+.display-card{
+ background-color: #F2F4F5;
+ width: 80%;
+ border-radius: 25px;
+}
+
+.checkbox-div {
+  display: inline-block;
+}
+
+h2 {
+  color: #202735;
+  font-weight: 700;
+}
+
+h3 {
+  color: #000000;
+  font-weight: 800;
+}
+
+.rounded-checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 15%;
+  vertical-align: middle;
+  border: 1px solid #9E9E9E;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.rounded-checkbox:checked {
+  appearance: auto;
+  clip-path: circle(65% at 50% 50%);
+  background-color: blue;
+}
+
+.publish{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 18px;
+  color: #4ACCED;
+  border-radius: 8px;
+  border: 1px solid #8FE1F5;
+  background-color: #E2FAFF;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 8px;
+  box-shadow:  0 2px 4px rgba(43, 43, 43, 0.2);
+} 
+
+.publish:hover{
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #8FE1F5;
+  background-color: #8FE1F5;
+}
+
+
+.delete{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 18px;
+  color: #F34E4E;
+  border-radius: 8px;
+  border: 1px solid #f46262;
+  background-color: #FFF0F0;
+  margin: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  box-shadow:  0 2px 4px rgba(43, 43, 43, 0.2);
+}
+
+.delete:hover{
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #f46262;
+  background-color: #f46262;
 }
 
 code {

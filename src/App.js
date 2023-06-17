@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './index.css';
+import DisplayCard from './components/displaycard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <h2>News Articles</h2>
+        <div className="checkbox-div">
+          <input type="checkbox" className="rounded-checkbox"/>
+        </div>
+        <button className="publish">Publish</button>
+        <button className="delete">Delete</button>
+      </div>
+      <DisplayCard text="fringilla"></DisplayCard>
+      ball
     </div>
   );
 }
