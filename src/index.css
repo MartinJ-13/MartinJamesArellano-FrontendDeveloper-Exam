@@ -267,16 +267,18 @@ h3 {
   padding-inline: 5px;
   padding-block: 50px;
   width: 650px;
+  height: 700px;
   border-radius: 10px;
   border: 0;
   box-shadow: 0 4px 6px rgba(104, 104, 104, 0.2);
+  overflow:hidden;
 }
 
 /* Modal Content */
 .modal-content {
     margin: auto;
-    min-height:500px;
-    height: fit-content;
+    min-height:400px;
+    max-height: 600px;
     width: 550px;
 }
 
@@ -311,10 +313,13 @@ h3 {
 }
 
 .modal-body{
+  height: 450px;
   font-size: 18px;
   font-weight: 300;
   border: #000000;
   padding: 20px;
+  padding-bottom: 30px;
+  overflow-y: auto;
   border-style: dashed;
 }
 
@@ -323,4 +328,25 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  padding-left: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 197, 197);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(168, 168, 168);
+  border-radius: 10px;
 }

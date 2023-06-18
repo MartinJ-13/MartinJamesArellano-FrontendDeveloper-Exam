@@ -2,27 +2,21 @@ import { HiUserCircle } from "react-icons/hi";
 import { FaRegCalendarMinus } from "react-icons/fa";
 
 import {GrDrag} from "react-icons/gr";
-import Modal from "react-modal";
 import {BsEyeFill} from "react-icons/bs";
 import React, { useState } from "react";
 import ReadFull from "./readfull";
+
+
 function DisplayCard(props) {
-
   const [isOpen, setIsOpen] = useState(false);
-
   function openModal() {
     setIsOpen(true);
-
-  }
-
-  function closeModal() {
-    setIsOpen(false);
   }
 
   return (
     <>
       <div>
-          <ReadFull isOpen={isOpen} setOpen={setIsOpen} content={props.data}/>
+        <ReadFull isOpen={isOpen} setOpen={setIsOpen} content={props.data} isChecked={props.checked} />
       </div>
 
       <div className="display-card">
@@ -33,7 +27,13 @@ function DisplayCard(props) {
         {/* second column: checkbox */}
         <div>
           <div className="checkbox-div">
-            <input type="checkbox" className="rounded-checkbox" />
+            <input
+              type="checkbox"
+              id={props.data.id}
+              isChecked={props.checked}
+              className="rounded-checkbox"
+              onChange={(e) => props.handleCheckboxChange(e, props.data)}
+            />
           </div>
         </div>
         {/* third column: article details */}
