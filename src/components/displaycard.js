@@ -1,15 +1,18 @@
 import { HiUserCircle } from "react-icons/hi";
 import { FaRegCalendarMinus } from "react-icons/fa";
+
 import {GrDrag} from "react-icons/gr";
+import Modal from "react-modal";
 import {BsEyeFill} from "react-icons/bs";
 import React, { useState } from "react";
-import Modal from "./modal";
+import ReadFull from "./readfull";
 function DisplayCard(props) {
 
   const [isOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
+
   }
 
   function closeModal() {
@@ -19,11 +22,7 @@ function DisplayCard(props) {
   return (
     <>
       <div>
-        <button onClick={openModal}>Open Modal</button>
-        <Modal isOpen={isOpen} onClose={closeModal}>
-          <h2>Modal Title</h2>
-          <p>Modal content goes here...</p>
-        </Modal>
+          <ReadFull isOpen={isOpen} setOpen={setIsOpen} content={props.data}/>
       </div>
 
       <div className="display-card">
@@ -67,7 +66,7 @@ function DisplayCard(props) {
           {/* third row: content */}
           <div className="article-content">
             <div className="article-body">{props.data.content}</div>
-            <div id="read-div">
+            <div id="read-div" onClick={openModal}>
               <BsEyeFill id="eye-icon" color="#4285F5" size="1.5rem" />
               <span id="read-full">{"  Read Full  "}</span>
             </div>
