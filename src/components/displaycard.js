@@ -9,6 +9,7 @@ import ReadFull from "./readfull";
 
 function DisplayCard(props) {
   const [isOpen, setIsOpen] = useState(false);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -16,7 +17,13 @@ function DisplayCard(props) {
   return (
     <>
       <div>
-        <ReadFull isOpen={isOpen} setOpen={setIsOpen} content={props.data} isChecked={props.checked} />
+        {/* Modal/Pop-Up */}
+        <ReadFull
+          isOpen={isOpen}
+          setOpen={setIsOpen}
+          content={props.data}
+          isChecked={props.checked}
+        />
       </div>
 
       <div className="display-card">
@@ -38,18 +45,18 @@ function DisplayCard(props) {
         </div>
         {/* third column: article details */}
         <div>
-          {/* first row */}
+          {/* first row: title */}
           <div className="card-header">{props.data.title}</div>
           {/* second row */}
           <div className="card-details">
-            {/* first column */}
+            {/* first column: user icon */}
             <div>
               <HiUserCircle className="icon" color="#12B880" size="1.8rem" />
             </div>
-            {/* second column */}
+            {/* second column: author name */}
             <div className="card-subheader">{props.data.author}</div>
 
-            {/* third column */}
+            {/* third column: calendar icon */}
 
             <div>
               <FaRegCalendarMinus
@@ -59,7 +66,7 @@ function DisplayCard(props) {
               />
             </div>
 
-            {/* fourth column: date */}
+            {/* fourth column: article date */}
             <div className="card-subheader">{props.data.date}</div>
           </div>
 

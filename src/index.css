@@ -43,7 +43,7 @@ input[type='search']:focus {
 .display-card{
  background-color: #F2F4F5;
  width: 85%;
- border-radius: 7px;
+ border-radius: 10px;
  margin-inline: 25px;
  margin-block: 10px;
  padding-inline: 30px;
@@ -265,7 +265,7 @@ h3 {
   padding-block: 50px;
   width: 650px;
   height: 700px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 0;
   box-shadow: 0 4px 6px rgba(104, 104, 104, 0.2);
   overflow:hidden;

@@ -16,7 +16,7 @@ function ReadFull({ isOpen, setOpen, content }) {
     setOpen(false);
   }
   return (
-    //
+    //Modal when clicking Read Full
     <dialog ref={dialogRef} className="modal">
       <div className="modal-content">
         <div className="upper-modal">
