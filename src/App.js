@@ -1,6 +1,6 @@
 
 import './index.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import DisplayCard from './components/displaycard';
 import Records from './MOCK_DATA.json'
 
@@ -9,7 +9,6 @@ function App() {
 
     const [checkedBoxes, setCheckedBoxes] = useState([]);
     const [articleRecords, setRecords] = useState(Records);
-    const [tempArray, setTempArray] = useState([]);
 
   	function removeItem() {
       const updatedArticleRecords = articleRecords.filter(

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap');
 
-
 body {
   margin: 0;
   font-family: 'Poppins';
@@ -198,8 +197,6 @@ h3 {
 .card-container{
   display: flex;
   flex-direction: column;
-  
-  
 }
 
 .card-details{
@@ -222,7 +219,7 @@ h3 {
 }
 .article-body{
   color: #838995;
-  width: 80%;
+  width: 70%;
   max-width: 800px;
   min-width: 200px;
   margin: auto;
@@ -300,6 +297,7 @@ h3 {
   flex-direction: row;
   gap: 10px;
 }
+
 /* The Close Button */
 .modal-close {
   padding-left: 10px;
@@ -330,18 +328,16 @@ h3 {
   margin-top: 10px;
 }
 
-/* width */
+/* Scrollbar options */
 ::-webkit-scrollbar {
   width: 7px;
   padding-left: 100px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(201, 197, 197);
   border-radius: 10px;
