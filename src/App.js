@@ -9,10 +9,7 @@ function App() {
 
     const [checkedBoxes, setCheckedBoxes] = useState([]);
     const [articleRecords, setRecords] = useState(Records);
-    const [tempArray, setTempArray] = useState();
-
-
-
+    const [tempArray, setTempArray] = useState([]);
 
   	function removeItem() {
       const updatedArticleRecords = articleRecords.filter(
@@ -26,17 +23,31 @@ function App() {
       const checkboxes = document.querySelectorAll(".rounded-checkbox");
       checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
+        checkbox.value = false;
       });
     }
 
     function selectAll(event){
-        const checked = event.target.checked;
-        const checkboxes = document.querySelectorAll(".rounded-checkbox");
-        checkboxes.forEach((checkbox) => {
-        checkbox.checked = checked;
+      
+      const checked = event.target.checked;
+      const newCheckedBoxes = [...checkedBoxes];
+
+      if(checked){
+        articleRecords.forEach((record) => {
+          newCheckedBoxes.push(record);
+          setCheckedBoxes(newCheckedBoxes);
         });
+      }
+
+      else{
+        setCheckedBoxes([]);
+      }
+      const checkboxes = document.querySelectorAll(".rounded-checkbox");
+      checkboxes.forEach((checkbox) => {
+      checkbox.checked = checked})
+
     }
-    
+  
     function handleCheckboxChange(event, articles){
       const checked = event.target.checked;
       const newCheckedBoxes = [...checkedBoxes];
@@ -57,10 +68,6 @@ function App() {
   return (
     <div className="web-page">
       <div>
-        {/* <div>
-          <button onClick={openModal}>Open</button>
-          <ReadFull isOpen={isOpen} setOpen={setIsOpen} />
-        </div> */}
         <h2>News Articles</h2>
         <div className="checkbox-div">
           <input type="checkbox" className="rounded-checkbox" onChange={(e) => selectAll(e)} />
@@ -78,7 +85,7 @@ function App() {
           <DisplayCard
             data={record}
             handleCheckboxChange={handleCheckboxChange}
-            checked={false}
+          
           ></DisplayCard>
         );
       })}
